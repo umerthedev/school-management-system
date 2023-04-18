@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\UsersController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::middleware([
@@ -33,3 +35,11 @@ Route::get('/logout', function () {
     Auth::logout();
     return redirect('login');
 })->name('admin.logout');
+
+//User Management System
+Route::prefix('Users')->group(function(){
+
+    //view.user
+    Route::get('/view',[UsersController::class,'view'])->name('view.user');
+
+});
