@@ -30,7 +30,7 @@ class UsersController extends Controller
         $data->usertype = $request->usertype;
         $data->name = $request->name;
         $data->email = $request->email;
-        $date->phone = $request->phone;
+        // $date->phone = $request->phone;
         $data->password = bcrypt($request->password);
         $data->save();
         $notification = array(

@@ -36,7 +36,7 @@
                                                                 <option value="" selected="" disabled="">Select
                                                                     Role</option>
                                                                 <option value="Admin">Admin</option>
-                                                                <option value="Operator">Operator</option>
+                                                                <option value="Operator">User</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -67,15 +67,15 @@
                                                 </div> <!-- End Col Md-6 -->
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h5>User Phone <span class="text-danger">*</span></h5>
+                                                        <h5>User Password <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <input type="phone" name="phone" class="form-control"
+                                                            <input type="text" name="password" class="form-control"
                                                                 required="">
                                                         </div>
                                                     </div>
                                                 </div><!-- End Col Md-6 -->
                                             </div> <!-- End Row -->
-                                            <div class="row">
+                                            {{-- <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <h5>User Password <span class="text-danger">*</span></h5>
@@ -87,7 +87,7 @@
                                                 </div> <!-- End Col Md-6 -->
                                                 <div class="col-md-6">
                                                 </div><!-- End Col Md-6 -->
-                                            </div> <!-- End Row -->
+                                            </div> <!-- End Row --> --}}
 
                                             <div class="text-xs-right">
                                                 <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">

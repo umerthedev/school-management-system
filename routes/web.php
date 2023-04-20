@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\UsersController;
+use App\Http\Controllers\Backend\Profile\ProfileController;
+
+
 
 
 /*
@@ -51,5 +54,20 @@ Route::prefix('Users')->group(function(){
     Route::post('/update/{id}',[UsersController::class,'update'])->name('user.update');
     //user.delete
     Route::get('/delete/{id}',[UsersController::class,'delete'])->name('user.delete');
+
+});
+
+//Your Profile & Change Password rooute
+Route::prefix('profile')->group(function(){
+
+    //your.profile
+    Route::get('/view',[ProfileController::class,'profile'])->name('your.profile');
+
+    //edit.profile
+    Route::get('/edit',[ProfileController::class,'edit'])->name('edit.profile');
+
+    //update.profile
+    Route::post('/store',[ProfileController::class,'update'])->name('update.profile');
+    
 
 });
