@@ -68,6 +68,12 @@ Route::prefix('profile')->group(function(){
 
     //update.profile
     Route::post('/store',[ProfileController::class,'update'])->name('update.profile');
+
+    //password.view
+    Route::get('/password/view',[ProfileController::class,'passwordView'])->name('password.view');
+
+    //password.update
+    Route::post('/password/update',[ProfileController::class,'passwordUpdate'])->name('password.update');
     
 
 });
