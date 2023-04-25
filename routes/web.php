@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\Backend\Profile\ProfileController;
+use App\Http\Controllers\Backend\Setup\StudentClassController;
 
 
 
@@ -74,6 +75,27 @@ Route::prefix('profile')->group(function(){
 
     //password.update
     Route::post('/password/update',[ProfileController::class,'passwordUpdate'])->name('password.update');
+    
+
+});
+
+
+//Student Class Route
+Route::prefix('Student')->group(function(){
+
+    //your.profile
+    Route::get('/Class/view',[StudentClassController::class,'viewStudent'])->name('student.class.view');
+    //add.student.class
+    Route::get('/Class/add',[StudentClassController::class,'addStudent'])->name('add.student.class');
+    //store.student.class
+    Route::post('/Class/store',[StudentClassController::class,'storeStudent'])->name('store.student.class');
+    //student.class.edit
+    Route::get('/Class/edit/{id}',[StudentClassController::class,'editStudent'])->name('student.class.edit');
+    //update.student.class
+    Route::post('/Class/update/{id}',[StudentClassController::class,'updateStudent'])->name('update.student.class');
+    //student.class.delete
+    Route::get('/Class/delete/{id}',[StudentClassController::class,'deleteStudent'])->name('student.class.delete');
+    
     
 
 });
