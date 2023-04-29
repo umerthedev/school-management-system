@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'View Fee Amount')
+@section('title', 'View Assign Subject')
 @section('admin')
 
     <!-- Content Wrapper. Contains page content -->
@@ -17,7 +17,7 @@
                                                 class="mdi mdi-home-outline"></i></a>
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">Setup Management</li>
-                                    <li class="breadcrumb-item active" aria-current="page">View Fee Amount</li>
+                                    <li class="breadcrumb-item active" aria-current="page">View Assign Subject</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,9 +32,9 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Fee Amount Tables</h3>
-                                <a href="{{ route('add.fee.amount') }}" style="float:right;"
-                                    class="btn btn-rounded btn-success mb-5">Add Fee Amount</a>
+                                <h3 class="box-title">Assign Subject Tables</h3>
+                                <a href="{{ route('add.assign.subject') }}" style="float:right;"
+                                    class="btn btn-rounded btn-success mb-5">Add Assign Subject</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -43,16 +43,16 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center" width="5%"> >Sl</>
-                                                <th class="text-center">Fee Category</th>
+                                                <th class="text-center">Assign Subject</th>
                                                 <th class="text-center" width="30%">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-                                            @foreach ($allData as $key => $amount)
+                                            @foreach ($allData as $key => $assign)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td class="text-center">{{ $amount['fee_category']['name'] }}</td>
+                                                    <td class="text-center">{{ $assign->class_id }}</td>
                                                     <td class="text-center">
                                                         <a href="{{ route('fee.amount.edit', $amount->fee_category_id) }}"
                                                             class="btn btn-info">Edit</a>
