@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('Profile_active', 'active')
+@section('title', 'Change Password')
 @section('admin')
 
     <div class="content-wrapper">

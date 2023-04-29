@@ -29,6 +29,8 @@ class StudentClassController extends Controller
         ],
         [
             'name.required' => 'Please Input Student Class Name',
+            'name.unique'  => 'Class Name Already Exists',
+
         ]);
 
         $data = new StudentClass();

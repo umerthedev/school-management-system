@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'Edit Student Class')
+@section('title', 'Edit Student Group')
 @section('admin')
 
     <div class="content-wrapper">
@@ -13,7 +13,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Edit Student Class</h4>
+                        <h4 class="box-title">Edit Student group</h4>
 
                     </div>
                     <!-- /.box-header -->
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col">
 
-                                <form method="post" action="{{ route('update.student.class', $editData->id) }}">
+                                <form method="post" action="{{ route('update.student.group', $editData->id) }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">

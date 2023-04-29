@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
-@section('Profile_active', 'active')
+@section('Setup_active', 'active')
+@section('title', 'Add Student Class')
 @section('admin')
 
     <div class="content-wrapper">
@@ -37,7 +38,7 @@
                                                 </div>
                                             </div><!-- End Col Md-6 -->
 
-                                            <div class="text-xs-right">
+                                            <div class="text-xs-right" style="float:right;">
                                                 <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">
                                             </div>
                                         </div>

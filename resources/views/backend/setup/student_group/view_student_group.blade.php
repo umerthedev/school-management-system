@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'View Student Class')
+@section('title', 'View Student Group')
 @section('admin')
 
     <!-- Content Wrapper. Contains page content -->
@@ -17,7 +17,7 @@
                                                 class="mdi mdi-home-outline"></i></a>
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">Setup Management</li>
-                                    <li class="breadcrumb-item active" aria-current="page">View Student Class</li>
+                                    <li class="breadcrumb-item active" aria-current="page">View Student Group</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,10 +32,10 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Class Tables</h3>
-                                <a href="{{ route('add.student.class') }}" style="float:right;"
+                                <h3 class="box-title">Student Group Tables</h3>
+                                <a href="{{ route('add.student.group') }}" style="float:right;"
                                     class="btn btn-rounded btn-success mb-5">Add Student
-                                    Class</a>
+                                    Group</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -55,9 +55,9 @@
                                                     <td class="text-center">{{ $key + 1 }}</td>
                                                     <td class="text-center" width="60%">{{ $student->name }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('student.class.edit', $student->id) }}"
+                                                        <a href="{{ route('student.group.edit', $student->id) }}"
                                                             class="btn btn-info">Edit</a>
-                                                        <a href="{{ route('student.class.delete', $student->id) }}"
+                                                        <a href="{{ route('student.group.delete', $student->id) }}"
                                                             class="btn btn-danger" id="delete">Delete</a>
                                                     </td>
                                                 </tr>

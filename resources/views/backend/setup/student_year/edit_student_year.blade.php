@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'Edit Student Class')
+@section('title', 'edit Student Year')
 @section('admin')
 
     <div class="content-wrapper">
@@ -13,7 +13,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Edit Student Class</h4>
+                        <h4 class="box-title">Add Student Class</h4>
 
                     </div>
                     <!-- /.box-header -->

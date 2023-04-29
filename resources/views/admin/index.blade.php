@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('dashboard_active', 'active')
+@section('title', 'School Management Dashboard')
 @section('admin')
 
     <div class="content-wrapper">

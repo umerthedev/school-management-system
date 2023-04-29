@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('user_active', 'active')
+@section('title', 'Add User')
 @section('admin')
 
     <div class="content-wrapper">
@@ -89,7 +90,7 @@
                                                 </div><!-- End Col Md-6 -->
                                             </div> <!-- End Row --> --}}
 
-                                            <div class="text-xs-right">
+                                            <div class="text-xs-right" style="float:right;">
                                                 <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">
                                             </div>
                                         </div>

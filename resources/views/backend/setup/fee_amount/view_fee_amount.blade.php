@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'View Student Class')
+@section('title', 'View Fee Amount')
 @section('admin')
 
     <!-- Content Wrapper. Contains page content -->
@@ -17,7 +17,7 @@
                                                 class="mdi mdi-home-outline"></i></a>
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">Setup Management</li>
-                                    <li class="breadcrumb-item active" aria-current="page">View Student Class</li>
+                                    <li class="breadcrumb-item active" aria-current="page">View Fee Amount</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,10 +32,9 @@
 
                         <div class="box">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Student Class Tables</h3>
-                                <a href="{{ route('add.student.class') }}" style="float:right;"
-                                    class="btn btn-rounded btn-success mb-5">Add Student
-                                    Class</a>
+                                <h3 class="box-title">Fee Amount Tables</h3>
+                                <a href="{{ route('add.fee.amount') }}" style="float:right;"
+                                    class="btn btn-rounded btn-success mb-5">Add Fee Amount</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -44,35 +43,25 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center" width="5%"> >Sl</>
-                                                <th class="text-center">Name</th>
+                                                <th class="text-center">Fee Category</th>
                                                 <th class="text-center" width="10%">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
-                                            @foreach ($allData as $key => $student)
+                                            @foreach ($allData as $key => $amount)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td class="text-center" width="60%">{{ $student->name }}</td>
+                                                    <td class="text-center">{{ $amount['fee_category']['name'] }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('student.class.edit', $student->id) }}"
+                                                        {{-- <a href="{{ route('fee.category.edit', $amount->id) }}"
                                                             class="btn btn-info">Edit</a>
-                                                        <a href="{{ route('student.class.delete', $student->id) }}"
-                                                            class="btn btn-danger" id="delete">Delete</a>
+                                                        <a href="{{ route('fee.category.delete', $amount->id) }}"
+                                                            class="btn btn-danger" id="delete">Delete</a> --}}
                                                     </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
-                                        {{-- <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot> --}}
                                     </table>
                                 </div>
                             </div>

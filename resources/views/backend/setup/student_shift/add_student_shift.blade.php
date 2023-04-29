@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'Edit Student Class')
+@section('title', 'Add Student Shift')
 @section('admin')
 
     <div class="content-wrapper">
@@ -13,7 +13,7 @@
                 <!-- Basic Forms -->
                 <div class="box">
                     <div class="box-header with-border">
-                        <h4 class="box-title">Edit Student Class</h4>
+                        <h4 class="box-title">Add Student Shift</h4>
 
                     </div>
                     <!-- /.box-header -->
@@ -21,16 +21,15 @@
                         <div class="row">
                             <div class="col">
 
-                                <form method="post" action="{{ route('update.student.class', $editData->id) }}">
+                                <form method="post" action="{{ route('store.student.shift') }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <h5>Class Name <span class="text-danger">*</span></h5>
+                                                    <h5>Shift Name <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="name" class="form-control"
-                                                            value="{{ $editData->name }}">
+                                                        <input type="text" name="name" class="form-control">
 
                                                         @error('name')
                                                             <span class="text-danger">{{ $message }}</span>
@@ -39,7 +38,7 @@
                                                 </div>
                                             </div><!-- End Col Md-6 -->
 
-                                            <div class="text-xs-right">
+                                            <div class="text-xs-right" style="float:right;">
                                                 <input type="submit" class="btn btn-rounded btn-info mb-5" value="Submit">
                                             </div>
                                         </div>
@@ -55,6 +54,7 @@
                 <!-- /.box -->
 
             </section>
+
         </div>
     </div>
 

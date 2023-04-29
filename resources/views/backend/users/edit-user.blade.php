@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('user_active', 'active')
+@section('title', 'Edit User')
 @section('admin')
 
     <div class="content-wrapper">

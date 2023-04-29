@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('Profile_active', 'active')
+@section('title', 'Profile')
 @section('admin')
 
     <!-- Content Wrapper. Contains page content -->
