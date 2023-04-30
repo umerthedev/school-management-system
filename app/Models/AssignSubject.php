@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class AssignSubject extends Model
 {
-    use HasFactory;
+   public function assignSub(){
+    return $this->belongsTo(StudentClass::class, 'class_id', 'id');
+    
+   }
 }

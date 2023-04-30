@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col">
 
-                                <form method="post" action="{{ route('store.fee.amount') }}">
+                                <form method="post" action="{{ route('store.assign.subject') }}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">

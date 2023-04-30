@@ -222,5 +222,15 @@ Route::prefix('Student')->group(function(){
     Route::get('/Assign/Subject/View',[AssignSubjectController::class,'viewAssignSubject'])->name('assign.subject.view');
     //add.assign.subject
     Route::get('/Assign/Subject/add',[AssignSubjectController::class,'addAssignSubject'])->name('add.assign.subject');
+    //store.assign.subject
+    Route::post('/Assign/Subject/store',[AssignSubjectController::class,'storeAssignSubject'])->name('store.assign.subject');
+    //assign.subject.edit
+    Route::get('/Assign/Subject/edit/{class_id}',[AssignSubjectController::class,'editAssignSubject'])->name('assign.subject.edit');
+    //update.assign.subject
+    Route::post('/Assign/Subject/update/{class_id}',[AssignSubjectController::class,'updateAssignSubject'])->name('update.assign.subject');
+    //assign.subject.details
+    Route::get('/Assign/Subject/details/{class_id}',[AssignSubjectController::class,'detailsAssignSubject'])->name('assign.subject.details');
+    //assign.subject.delete
+    Route::get('/Assign/Subject/delete/{class_id}',[AssignSubjectController::class,'deleteAssignSubject'])->name('assign.subject.delete');
 
 });

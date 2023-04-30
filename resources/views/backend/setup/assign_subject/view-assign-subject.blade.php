@@ -52,13 +52,13 @@
                                             @foreach ($allData as $key => $assign)
                                                 <tr>
                                                     <td class="text-center">{{ $key + 1 }}</td>
-                                                    <td class="text-center">{{ $assign->class_id }}</td>
+                                                    <td class="text-center">{{ $assign['assignSub']['name'] }}</td>
                                                     <td class="text-center">
-                                                        <a href="{{ route('fee.amount.edit', $amount->fee_category_id) }}"
+                                                        <a href="{{ route('assign.subject.edit', $assign->class_id) }}"
                                                             class="btn btn-info">Edit</a>
-                                                        <a href="{{ route('fee.amount.details', $amount->fee_category_id) }}"
+                                                        <a href="{{ route('assign.subject.details', $assign->class_id) }}"
                                                             class="btn btn-success">Details</a>
-                                                        <a href="{{ route('fee.amount.delete', $amount->fee_category_id) }}"
+                                                        <a href="{{ route('assign.subject.delete', $assign->class_id) }}"
                                                             class="btn btn-danger" id="delete">Delete</a>
                                                     </td>
                                                 </tr>
