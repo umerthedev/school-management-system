@@ -70,8 +70,8 @@
                                                     <div class="form-group">
                                                         <h5>Phone </h5>
                                                         <div class="controls">
-                                                            <input type="text" name="phone" class="form-control"
-                                                                value="{{ $editData->phone }}">
+                                                            <input type="text" name="mobile" class="form-control"
+                                                                value="{{ $editData->mobile }}">
                                                         </div>
                                                     </div>
                                                 </div><!-- End Col Md-6 -->

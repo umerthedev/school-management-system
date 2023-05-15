@@ -12,6 +12,9 @@ use App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
+use App\Http\Controllers\Backend\Setup\DesignationController;
+
+use App\Http\Controllers\Backend\Student\StudentRegController;
 
 
 
@@ -88,7 +91,7 @@ Route::prefix('profile')->group(function(){
 });
 
 
-//Student Class, Year, Group Route
+//Setup Management Student Class, Year, Group Route
 Route::prefix('Student')->group(function(){
 
     //your.profile
@@ -232,5 +235,36 @@ Route::prefix('Student')->group(function(){
     Route::get('/Assign/Subject/details/{class_id}',[AssignSubjectController::class,'detailsAssignSubject'])->name('assign.subject.details');
     //assign.subject.delete
     Route::get('/Assign/Subject/delete/{class_id}',[AssignSubjectController::class,'deleteAssignSubject'])->name('assign.subject.delete');
+
+
+    //Designation Routes
+    //designation.view
+    Route::get('/Designation/View',[DesignationController::class,'viewDesignation'])->name('designation.view');
+    //add.designation
+    Route::get('/Designation/add',[DesignationController::class,'addDesignation'])->name('add.designation');
+    //store.designation
+    Route::post('/Designation/store',[DesignationController::class,'storeDesignation'])->name('store.designation');
+    //designation.edit
+    Route::get('/Designation/edit/{id}',[DesignationController::class,'editDesignation'])->name('designation.edit');
+    //update.designation
+    Route::post('/Designation/update/{id}',[DesignationController::class,'updateDesignation'])->name('update.designation');
+    //designation.delete
+    Route::get('/Designation/delete/{id}',[DesignationController::class,'deleteDesignation'])->name('designation.delete');
+
+});
+
+
+
+//Student Management Routes
+//Your Profile & Change Password rooute
+Route::prefix('students')->group(function(){
+
+    //student.registration.view
+    Route::get('/registration/view',[StudentRegController::class,'StudentRegView'])->name('student.registration.view');
+
+    //add.student.reg
+    Route::get('/registration/add',[StudentRegController::class,'StudentRegAdd'])->name('add.student.reg');
+
+    
 
 });

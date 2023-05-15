@@ -46,6 +46,7 @@
                                                 <th class="text-center">Name</th>
                                                 <th class="text-center">Role</th>
                                                 <th class="text-center">Email</th>
+                                                <th class="text-center">Code</th>
 
                                                 <th class="text-center" width="20%">Action</th>
                                             </tr>
@@ -58,6 +59,7 @@
                                                     <td class="text-center">{{ $users->name }}</td>
                                                     <td class="text-center">{{ $users->usertype }}</td>
                                                     <td class="text-center">{{ $users->email }}</td>
+                                                    <td class="text-center">{{ $users->code }}</td>
 
                                                     <td class="text-center">
                                                         <a href="{{ route('user.edit', $users->id) }}"

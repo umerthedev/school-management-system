@@ -43,7 +43,7 @@
                                         <thead>
                                             <tr>
                                                 <th class="text-center" width="5%"> >Sl</>
-                                                <th class="text-center">Assign Subject</th>
+                                                <th class="text-center">Class</th>
                                                 <th class="text-center" width="30%">Action</th>
                                             </tr>
                                         </thead>

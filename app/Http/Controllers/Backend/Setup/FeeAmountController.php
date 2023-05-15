@@ -30,9 +30,9 @@ class FeeAmountController extends Controller
 
     //store.fee.amount php8 
     public function storeFeeAmount(Request $request){
-        $countClass = count($request->class_id);
-        if($countClass !=NULL){
-            for($i=0; $i<$countClass; $i++){
+        $countSubject = count($request->class_id);
+        if($countSubject !=NULL){
+            for($i=0; $i<$countSubject; $i++){
                 $fee_amount = new FeeAmountCategory();
                 $fee_amount->fee_category_id = $request->fee_category_id;
                 $fee_amount->class_id = $request->class_id[$i];

@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'View Student Shift')
+@section('title', 'View Exam Type')
 @section('admin')
 
     <!-- Content Wrapper. Contains page content -->

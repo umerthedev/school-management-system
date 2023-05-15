@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 @section('Setup_active', 'active')
-@section('title', 'Edit Student Shift')
+@section('title', 'Edit Student Exam')
 @section('admin')
 
     <div class="content-wrapper">

@@ -75,7 +75,7 @@
                 var link = $(this).attr("href");
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "Eant to Delete this User",
+                    text: "Want to Delete this User",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',

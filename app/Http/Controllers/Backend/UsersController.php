@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     //View.users
     public function view(){
-        $data['AllData'] = User::all();
+        $data['AllData'] = User::where('usertype','Admin')->get();
         return view('backend.users.view-user',$data);
     }
     //user.add
@@ -24,14 +24,16 @@ class UsersController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|unique:users|max:255',
             'email' => 'required|unique:users|max:255',
-            'password' => 'required',
+            
         ]);
         $data = new User();
-        $data->usertype = $request->usertype;
+        $code = rand(0000,9999);
+        $data->usertype = 'Admin';
+        $data->role = $request->role;
         $data->name = $request->name;
         $data->email = $request->email;
-        // $date->phone = $request->phone;
-        $data->password = bcrypt($request->password);
+        $data->password = bcrypt($code);
+        $data->code = $code;
         $data->save();
         $notification = array(
             'message' => 'User Inserted Successfully',
@@ -48,11 +50,10 @@ class UsersController extends Controller
 
     //user.update
     public function update(Request $request,$id){
-        $data = User::find($id);
-        $data->usertype = $request->usertype;
+        $data = User::find($id);        
         $data->name = $request->name;
         $data->email = $request->email;
-        // $date->phone = $request->phone;
+        $data->role = $request->role;        
         $data->save();
         $notification = array(
             'message' => 'User Updated Successfully',

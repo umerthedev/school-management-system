@@ -38,7 +38,7 @@
                                 <h3 class="widget-user-username">Name: {{ $user->name }}</h3>
                                 <a href="{{ route('edit.profile') }}" style="float:right;"
                                     class="btn btn-rounded btn-success mb-5">Edit Profile</a>
-                                <h6 class="widget-user-desc">Role: {{ $user->usertype }}</h6>
+                                <h6 class="widget-user-desc">Role: {{ $user->role }}</h6>
                                 <h6 class="widget-user-desc">Email: {{ $user->email }}</h6>
 
                             </div>
@@ -52,7 +52,7 @@
                                     <div class="col-sm-4">
                                         <div class="description-block">
                                             <h5 class="description-header">Mobile</h5>
-                                            <span class="description-text">{{ $user->phone }}</span>
+                                            <span class="description-text">{{ $user->mobile }}</span>
                                         </div>
                                         <!-- /.description-block -->
                                     </div>
