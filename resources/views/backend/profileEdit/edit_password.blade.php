@@ -40,7 +40,7 @@
                                             </div><!-- End Col Md-6 -->
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <h5>User Email <span class="text-danger">*</span></h5>
+                                                    <h5>New Password <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <input type="password" name="password" id="password"
                                                             class="form-control">
@@ -52,7 +52,7 @@
                                             </div> <!-- End Col Md-6 -->
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <h5>User Password <span class="text-danger">*</span></h5>
+                                                    <h5>Confirm Password <span class="text-danger">*</span></h5>
                                                     <div class="controls">
                                                         <input type="password" name="password_confirmation"
                                                             id="password_confirmation" class="form-control">
