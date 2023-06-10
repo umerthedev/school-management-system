@@ -74,7 +74,7 @@
                     <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designation</a></li>
                 </ul>
             </li>
-            <li class="treeview @yield('student_management_active')">
+            <li class="treeview @yield('student_active')">
                 <a href="#">
                     <i data-feather="lock"></i> <span>Student Management</span>
                     <span class="pull-right-container">

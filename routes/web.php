@@ -268,6 +268,12 @@ Route::prefix('students')->group(function(){
     //store.student.registration
     Route::post('/registration/store',[StudentRegController::class,'StudentRegStore'])->name('store.student.registration');
 
+    //student.class.year.wise
+    Route::get('/year/class/wise',[StudentRegController::class,'StudentClassYearWise'])->name('student.class.year.wise');
+
+    //student.reg.edit
+    Route::get('/registration/edit/{student_id}',[StudentRegController::class,'StudentRegEdit'])->name('student.reg.edit');
+
     
 
 });
