@@ -115,7 +115,7 @@
                                                     @if (Auth::user()->role == 'Admin')
                                                         <th class="text-center">Code</th>
                                                     @endif
-                                                    <th class="text-center" width="10%">Action</th>
+                                                    <th class="text-center" width="15%">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -138,10 +138,18 @@
                                                         </td>
                                                         <td class="text-center" width="">{{ $student->year_id }}</td>
                                                         <td class="text-center">
-                                                            <a href="{{ route('student.reg.edit', $student->student_id) }}"
-                                                                class="btn btn-info">Edit</a>
-                                                            <a href="{{ route('student.year.delete', $student->id) }}"
-                                                                class="btn btn-danger" id="delete">Delete</a>
+
+                                                            <a title="Edit"
+                                                                href="{{ route('student.reg.edit', $student->student_id) }}"
+                                                                class="btn btn-info"> <i class="fa fa-edit"></i> </a>
+
+                                                            <a title="Promotion"
+                                                                href="{{ route('student.registration.promotion', $student->student_id) }}"
+                                                                class="btn btn-primary"><i class="fa fa-check"></i></a>
+
+                                                            <a target="_blank" title="Details"
+                                                                href="{{ route('student.registration.details', $student->student_id) }}"
+                                                                class="btn btn-danger"><i class="fa fa-eye"></i></a>
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -171,7 +179,7 @@
                                                     @if (Auth::user()->role == 'Admin')
                                                         <th class="text-center">Code</th>
                                                     @endif
-                                                    <th class="text-center" width="10%">Action</th>
+                                                    <th class="text-center" width="15%">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -195,10 +203,17 @@
                                                         <td class="text-center" width="">{{ $student->year_id }}
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="{{ route('student.reg.edit', $student->student_id) }}"
-                                                                class="btn btn-info">Edit</a>
-                                                            <a href="{{ route('student.year.delete', $student->id) }}"
-                                                                class="btn btn-danger" id="delete">Delete</a>
+                                                            <a title="Edit"
+                                                                href="{{ route('student.reg.edit', $student->student_id) }}"
+                                                                class="btn btn-info"> <i class="fa fa-edit"></i> </a>
+
+                                                            <a title="Promotion"
+                                                                href="{{ route('student.registration.promotion', $student->student_id) }}"
+                                                                class="btn btn-primary"><i class="fa fa-check"></i></a>
+
+                                                            <a target="_blank" title="Details"
+                                                                href="{{ route('student.registration.details', $student->student_id) }}"
+                                                                class="btn btn-danger"><i class="fa fa-eye"></i></a>
                                                         </td>
                                                     </tr>
                                                 @endforeach
