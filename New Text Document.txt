@@ -1,0 +1,6 @@
+composer remove niklasravnsborg/laravel-pdf
+composer remove mpdf/mpdf
+composer remove psr/log
+composer require psr/log=v2.*
+composer require mpdf/mpdf v8.0.17
+composer require niklasravnsborg/laravel-pdf

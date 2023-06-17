@@ -25,4 +25,15 @@ class StudentRollController extends Controller
         // $data['allData'] = AssignStudent::where('year_id',$data['year_id'])->where('class_id',$data['class_id'])->get();
         return view('backend.student.student_roll.roll_generate_view', $data);
     }
+
+
+    //StudentRegGetStudents
+    public function StudentRegGetStudents(Request $request){
+        // dd('Ok Done');
+
+        $allData = AssignStudent::with(['student'])->where('year_id',$request->year_id)->where('class_id',$request->class_id)->get();
+        // dd($allData->toArray());
+        return response()->json($allData);
+    }
+
 }
