@@ -39,8 +39,8 @@
                             </div>
 
                             <div class="box-body">
-                                <form action="" method="get">
-
+                                <form action="{{ route('roll.generate.store') }}" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">

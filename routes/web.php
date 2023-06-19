@@ -297,6 +297,9 @@ Route::prefix('students')->group(function(){
     //student.registration.getstudents IN JS 
     Route::get('/registration/getstudents',[StudentRollController::class,'StudentRegGetStudents'])->name('student.registration.getstudents');
 
+    //roll.generate.store
+    Route::post('/roll/generate/store',[StudentRollController::class,'StudentRollStore'])->name('roll.generate.store');
+
     
 
 });
